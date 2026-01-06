@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const spotsLeft = details.max_participants - details.participants.length;
 
-        // Participants section
+        // Create participants list HTML
         let participantsHTML = "";
-        if (details.participants && details.participants.length > 0) {
+        if (details.participants.length > 0) {
           participantsHTML = `
             <div class="participants-section">
-              <span class="participants-title">Participants:</span>
+              <strong>Participants:</strong>
               <ul class="participants-list">
                 ${details.participants
                   .map(
